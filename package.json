@@ -1,0 +1,80 @@
+{
+    "name": "ScienHub",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "build": "next build",
+        "dev": "next dev --port 5050",
+        "lint": "next lint",
+        "lint:fix": "next lint --fix",
+        "prepare": "husky install",
+        "start": "next start --port 5051",
+        "update:deps": "npx npm-check-updates -u && npm install",
+        "update:tw": "npx @tailwindcss/upgrade@next"
+    },
+    "dependencies": {
+        "@codemirror/language": "^6.10.8",
+        "@codemirror/state": "^6.5.1",
+        "@codemirror/theme-one-dark": "^6.1.2",
+        "@codemirror/view": "^6.36.2",
+        "@iconify/react": "^5.2.0",
+        "@mdx-js/loader": "^3.1.0",
+        "@mdx-js/react": "^3.1.0",
+        "@next/mdx": "^15.1.6",
+        "@next/third-parties": "^15.1.6",
+        "@radix-ui/react-dropdown-menu": "^2.1.5",
+        "@radix-ui/react-label": "^2.1.1",
+        "@radix-ui/react-navigation-menu": "^1.2.4",
+        "@radix-ui/react-slot": "^1.1.1",
+        "@tailwindcss/postcss": "^4.0.0",
+        "@types/mdx": "^2.0.13",
+        "axios": "^1.7.9",
+        "class-variance-authority": "^0.7.1",
+        "clsx": "^2.1.1",
+        "codemirror": "^6.0.1",
+        "disqus-react": "^1.1.5",
+        "lint-staged": "^15.4.3",
+        "lucide-react": "^0.474.0",
+        "mdx": "^0.3.1",
+        "next": "^15.1.6",
+        "next-auth": "^4.24.11",
+        "next-themes": "^0.4.4",
+        "pdfjs-dist": "^4.10.38",
+        "react": "^19",
+        "react-complex-tree": "^2.4.6",
+        "react-dom": "^19",
+        "rehype-mathjax": "^6.0.0",
+        "rehype-slug": "^6.0.0",
+        "remark-gfm": "^4.0.0",
+        "remark-math": "^6.0.0",
+        "remark-parse": "^11.0.0",
+        "swr": "^2.3.0",
+        "tailwind-merge": "^2.6.0",
+        "tailwindcss-animate": "^1.0.7",
+        "y-codemirror.next": "^0.3.5"
+    },
+    "devDependencies": {
+        "@tailwindcss/typography": "^0.5.16",
+        "@types/node": "^22",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "eslint": "^9",
+        "eslint-config-next": "15.1.6",
+        "husky": "^9.1.7",
+        "postcss": "^8",
+        "tailwindcss": "^4.0.0",
+        "typescript": "^5"
+    },
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx}": [
+            "next lint --fix --dir ./",
+            "prettier --write"
+        ],
+        "*.css": [
+            "prettier --write"
+        ],
+        "*.{md,json}": [
+            "prettier --write"
+        ]
+    }
+}

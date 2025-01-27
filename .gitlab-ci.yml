@@ -1,0 +1,14 @@
+cache:
+  paths:
+    - node_modules/
+
+build:
+  tags:
+    - runner
+    - x86
+  stage: build
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  script:
+    - npm i && npm run lint && npm run build

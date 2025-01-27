@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+
+.panel {
+    height: 24px;
+    @apply bg-amber-200
+}
