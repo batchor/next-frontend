@@ -9,6 +9,7 @@ import rehypeSlug from 'rehype-slug'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: "export",
+    distDir: "dist",
     trailingSlash: false,
     pageExtensions: ["ts", "tsx", "mdx"],
 };
