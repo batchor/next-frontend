@@ -2,6 +2,13 @@
 import { IDE } from "./ide"
 import Navbar from "./nav"
 
+export async function generateStaticParams() {
+    return [{
+        username: "test",
+        projectname: "test",
+    }]
+}
+
 const editor = () => {
     return (
         <div className="h-screen w-full flex flex-col">
