@@ -5,8 +5,10 @@ import remarkGfm from 'remark-gfm'
 import rehypeMathjax from "rehype-mathjax"
 import rehypeSlug from 'rehype-slug'
 
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    output: "export",
     trailingSlash: false,
     pageExtensions: ["ts", "tsx", "mdx"],
 };
@@ -14,7 +16,6 @@ const nextConfig = {
 
 const withMDX = createMDX({
     extension: /\.mdx$/,
-    output: "export",
     options: {
         remarkPlugins: [remarkParse, remarkMath, remarkGfm],
         rehypePlugins: [rehypeMathjax, rehypeSlug],

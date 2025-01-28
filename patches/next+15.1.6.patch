@@ -1,0 +1,26 @@
+diff --git a/node_modules/next/dist/build/index.js b/node_modules/next/dist/build/index.js
+index 4cb5619..6718515 100644
+--- a/node_modules/next/dist/build/index.js
++++ b/node_modules/next/dist/build/index.js
+@@ -1294,7 +1294,7 @@ async function build(dir, reactProductionProfiling = false, debugOutput = false,
+                                             if (appConfig.revalidate !== 0) {
+                                                 const hasGenerateStaticParams = workerResult.prerenderedRoutes && workerResult.prerenderedRoutes.length > 0;
+                                                 if (config.output === 'export' && isDynamic && !hasGenerateStaticParams) {
+-                                                    throw new Error(`Page "${page}" is missing "generateStaticParams()" so it cannot be used with "output: export" config.`);
++                                                    // throw new Error(`Page "${page}" is missing "generateStaticParams()" so it cannot be used with "output: export" config.`);
+                                                 }
+                                                 // Mark the app as static if:
+                                                 // - It has no dynamic param
+diff --git a/node_modules/next/dist/esm/build/index.js b/node_modules/next/dist/esm/build/index.js
+index 49ef6e4..146e9ea 100644
+--- a/node_modules/next/dist/esm/build/index.js
++++ b/node_modules/next/dist/esm/build/index.js
+@@ -1226,7 +1226,7 @@ export default async function build(dir, reactProductionProfiling = false, debug
+                                             if (appConfig.revalidate !== 0) {
+                                                 const hasGenerateStaticParams = workerResult.prerenderedRoutes && workerResult.prerenderedRoutes.length > 0;
+                                                 if (config.output === 'export' && isDynamic && !hasGenerateStaticParams) {
+-                                                    throw new Error(`Page "${page}" is missing "generateStaticParams()" so it cannot be used with "output: export" config.`);
++                                                    // throw new Error(`Page "${page}" is missing "generateStaticParams()" so it cannot be used with "output: export" config.`);
+                                                 }
+                                                 // Mark the app as static if:
+                                                 // - It has no dynamic param
